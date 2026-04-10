@@ -490,14 +490,6 @@ section{padding:48px 22px;position:relative}
 }
 .reservation-method{
   margin-top:36px;
-  padding:32px 24px;
-  font-size:16px;
-  line-height:2.1;
-  color:var(--text-soft);
-  background:linear-gradient(135deg,rgba(255,77,157,0.10),rgba(184,156,214,0.10));
-  border:1px solid rgba(255,77,157,0.28);
-  border-radius:20px;
-  box-shadow:0 10px 40px rgba(255,77,157,0.18);
 }
 .reservation-method .lead-text{
   font-weight:900;
@@ -508,18 +500,158 @@ section{padding:48px 22px;position:relative}
   letter-spacing:0.02em;
   word-break:keep-all;
   overflow-wrap:break-word;
+  text-align:center;
 }
-.reservation-method .keyword{
-  display:inline-block;
-  padding:12px 28px;
-  background:linear-gradient(90deg,#ff4d9d,#b89cd6);
+/* ===== DM CHAT MOCKUP ===== */
+.dm-chat{
+  max-width:360px;
+  margin:0 auto;
+  background:#1a0a14;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(255,77,157,0.35),0 0 0 1px rgba(255,77,157,0.3);
+}
+.dm-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  background:linear-gradient(135deg,#262026,#1a0a14);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.dm-header .avatar{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+  padding:2px;
+  flex-shrink:0;
+}
+.dm-header .avatar-inner{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background:#1a0a14;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Orbitron',sans-serif;
+  font-size:9px;
   color:#fff;
-  border-radius:50px;
   font-weight:900;
-  font-size:18px;
-  margin:12px 0;
-  letter-spacing:0.06em;
-  box-shadow:0 8px 24px rgba(255,77,157,0.45);
+  letter-spacing:0.05em;
+}
+.dm-header .info{
+  flex:1;
+  min-width:0;
+  text-align:left;
+}
+.dm-header .name{
+  font-size:13px;
+  font-weight:700;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.dm-header .verified{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:13px;
+  height:13px;
+  background:#3897f0;
+  border-radius:50%;
+  color:#fff;
+  font-size:8px;
+  font-weight:900;
+}
+.dm-header .status{
+  font-size:10px;
+  color:#a8a8a8;
+  margin-top:1px;
+}
+.dm-header .ig-icon{
+  width:22px;
+  height:22px;
+  flex-shrink:0;
+}
+.dm-body{
+  padding:18px 14px 14px;
+  background:#0a0008;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.dm-body .day-label{
+  text-align:center;
+  font-size:10px;
+  color:#7a7a7a;
+  margin-bottom:4px;
+  letter-spacing:0.04em;
+}
+.dm-msg{
+  display:flex;
+  max-width:80%;
+}
+.dm-msg.received{
+  align-self:flex-start;
+}
+.dm-msg.sent{
+  align-self:flex-end;
+}
+.dm-msg .bubble{
+  padding:10px 14px;
+  border-radius:20px;
+  font-size:13px;
+  line-height:1.55;
+  color:#fff;
+  text-align:left;
+  word-break:break-word;
+}
+.dm-msg.received .bubble{
+  background:#262626;
+  border-bottom-left-radius:6px;
+}
+.dm-msg.sent .bubble{
+  background:linear-gradient(135deg,#ff4d9d,#b89cd6);
+  border-bottom-right-radius:6px;
+  font-weight:900;
+  letter-spacing:0.04em;
+  box-shadow:0 6px 18px rgba(255,77,157,0.4);
+}
+.dm-msg .bubble.highlight{
+  font-size:15px;
+  padding:12px 18px;
+}
+.dm-input{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px 16px;
+  background:#1a0a14;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+.dm-input .field{
+  flex:1;
+  padding:9px 14px;
+  background:#262626;
+  border-radius:50px;
+  font-size:11px;
+  color:#7a7a7a;
+  text-align:left;
+}
+.dm-input .send{
+  font-size:11px;
+  font-weight:700;
+  color:#3897f0;
+}
+.dm-note{
+  margin-top:18px;
+  font-size:12px;
+  color:var(--text-soft);
+  text-align:center;
+  line-height:1.7;
 }
 .confirm-form{
   position:relative;
@@ -912,9 +1044,34 @@ footer .nav a{font-size:11px;color:var(--text-soft)}
 
     <div class="reservation-method">
       <span class="lead-text">体験事前予約をご希望の方へ</span>
-      インスタグラムDMより<br>
-      <span class="keyword">【BWJ体験希望】</span><br>
-      と一言お送りください。<br>個別に受付いたします！
+
+      <div class="dm-chat">
+        <div class="dm-header">
+          <div class="avatar"><div class="avatar-inner">UR</div></div>
+          <div class="info">
+            <div class="name">ururia.official <span class="verified">✓</span></div>
+            <div class="status">Instagram DM</div>
+          </div>
+        </div>
+        <div class="dm-body">
+          <div class="day-label">━ 体験予約はこちら ━</div>
+          <div class="dm-msg received">
+            <div class="bubble">こんにちは✨<br>BWJ TOKYO 2026の体験予約はDMで受付中です！</div>
+          </div>
+          <div class="dm-msg sent">
+            <div class="bubble highlight">【BWJ体験希望】</div>
+          </div>
+          <div class="dm-msg received">
+            <div class="bubble">ありがとうございます💕<br>個別に日程をご案内いたしますね！</div>
+          </div>
+        </div>
+        <div class="dm-input">
+          <div class="field">メッセージ...</div>
+          <div class="send">送信</div>
+        </div>
+      </div>
+
+      <p class="dm-note">インスタグラムDMより<br><strong style="color:#ff4d9d;font-weight:900">「【BWJ体験希望】」</strong>と一言お送りください。<br>個別に受付いたします！</p>
     </div>
 
     <div class="confirm-form">
