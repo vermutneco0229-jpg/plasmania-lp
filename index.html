@@ -514,67 +514,24 @@ section{padding:48px 22px;position:relative}
 .dm-header{
   display:flex;
   align-items:center;
-  gap:12px;
+  justify-content:center;
+  gap:8px;
   padding:14px 16px;
   background:linear-gradient(135deg,#262026,#1a0a14);
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
-.dm-header .avatar{
-  width:38px;
-  height:38px;
-  border-radius:50%;
+.dm-header .ig-logo{
+  width:18px;
+  height:18px;
+  border-radius:5px;
   background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
-  padding:2px;
   flex-shrink:0;
 }
-.dm-header .avatar-inner{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  background:#1a0a14;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'Orbitron',sans-serif;
-  font-size:9px;
-  color:#fff;
-  font-weight:900;
-  letter-spacing:0.05em;
-}
-.dm-header .info{
-  flex:1;
-  min-width:0;
-  text-align:left;
-}
-.dm-header .name{
-  font-size:13px;
+.dm-header .label{
+  font-size:12px;
   font-weight:700;
   color:#fff;
-  display:flex;
-  align-items:center;
-  gap:4px;
-}
-.dm-header .verified{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:13px;
-  height:13px;
-  background:#3897f0;
-  border-radius:50%;
-  color:#fff;
-  font-size:8px;
-  font-weight:900;
-}
-.dm-header .status{
-  font-size:10px;
-  color:#a8a8a8;
-  margin-top:1px;
-}
-.dm-header .ig-icon{
-  width:22px;
-  height:22px;
-  flex-shrink:0;
+  letter-spacing:0.06em;
 }
 .dm-body{
   padding:18px 14px 14px;
@@ -652,6 +609,19 @@ section{padding:48px 22px;position:relative}
   color:var(--text-soft);
   text-align:center;
   line-height:1.7;
+}
+.dm-desc{
+  font-size:14px;
+  line-height:1.95;
+  color:var(--text-soft);
+  text-align:center;
+  margin-bottom:24px;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+.dm-desc strong{
+  color:#ff4d9d;
+  font-weight:900;
 }
 .confirm-form{
   position:relative;
@@ -1045,24 +1015,16 @@ footer .nav a{font-size:11px;color:var(--text-soft)}
     <div class="reservation-method">
       <span class="lead-text">体験事前予約をご希望の方へ</span>
 
+      <p class="dm-desc">マシンの体験予約受付は、Instagram DMより受付けております。<br>DMより<strong>「体験希望」</strong>と一言、お送りくださいませ。<br>日程を調整させていただきます。</p>
+
       <div class="dm-chat">
         <div class="dm-header">
-          <div class="avatar"><div class="avatar-inner">UR</div></div>
-          <div class="info">
-            <div class="name">ururia.official <span class="verified">✓</span></div>
-            <div class="status">Instagram DM</div>
-          </div>
+          <span class="ig-logo"></span>
+          <span class="label">InstagramDM</span>
         </div>
         <div class="dm-body">
-          <div class="day-label">━ 体験予約はこちら ━</div>
-          <div class="dm-msg received">
-            <div class="bubble">こんにちは✨<br>BWJ TOKYO 2026の体験予約はDMで受付中です！</div>
-          </div>
           <div class="dm-msg sent">
-            <div class="bubble highlight">【BWJ体験希望】</div>
-          </div>
-          <div class="dm-msg received">
-            <div class="bubble">ありがとうございます💕<br>個別に日程をご案内いたしますね！</div>
+            <div class="bubble highlight">体験希望</div>
           </div>
         </div>
         <div class="dm-input">
@@ -1070,8 +1032,6 @@ footer .nav a{font-size:11px;color:var(--text-soft)}
           <div class="send">送信</div>
         </div>
       </div>
-
-      <p class="dm-note">インスタグラムDMより<br><strong style="color:#ff4d9d;font-weight:900">「【BWJ体験希望】」</strong>と一言お送りください。<br>個別に受付いたします！</p>
     </div>
 
     <div class="confirm-form">
